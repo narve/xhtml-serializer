@@ -6,6 +6,7 @@ import no.dv8.xhtml.generation.elements.a;
 import no.dv8.xhtml.generation.elements.span;
 import no.dv8.xhtml.generation.support.Element;
 import no.dv8.xhtml.generation.support.Str;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
+@Ignore
 public class XHTMLSerializerTest extends TestCase {
 
 

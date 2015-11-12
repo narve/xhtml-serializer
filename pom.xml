@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.narve</groupId>
     <artifactId>xhtml-serializer</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>2</version>
 
     <name>XHTML-serializer</name>
 
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.github.narve</groupId>
             <artifactId>xhtml-generator</artifactId>
-            <version>1.1-SNAPSHOT</version>
+            <version>2</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -69,5 +69,15 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <!--other repositories if any-->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+
+    </repositories>
+
 
 </project>
