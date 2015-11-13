@@ -17,12 +17,17 @@ import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
-@Ignore
+//@Ignore
 public class XHTMLSerializerTest extends TestCase {
 
+    public static enum TestEnum {
+        A, B, C
+    }
 
     @Getter
     private static class Performer {
+        Integer id = 3;
+        TestEnum testEnu = TestEnum.A;
         String name;
         String other;
         public Performer(String name, String other) {
@@ -48,6 +53,12 @@ public class XHTMLSerializerTest extends TestCase {
         public String toString() {
             return title;
         }
+    }
+
+    public void testInteger() {
+        XHTMLSerialize ser = new XHTMLSerialize();
+        Element element = ser.generateElement(new Performer("per1", "per2"), 5);
+        fail( element.toHTML());
     }
 
     public void testGenerateElement() throws Exception {

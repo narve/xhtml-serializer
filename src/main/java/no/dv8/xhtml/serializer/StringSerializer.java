@@ -7,9 +7,9 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-public class StringSerializer implements XHTMLSerializer<String> {
+public class StringSerializer implements XHTMLSerializer<Object> {
     @Override
-    public Element<?> generateElement(String obj, int levels) {
+    public Element<?> generateElement(Object obj, int levels) {
         return string(obj);
     }
 

@@ -27,6 +27,8 @@ public class XHTMLSerialize<T> implements XHTMLSerializer {
         typeMap.put( Date.class, new DateSerializer() );
         typeMap.put( Instant.class, new InstantSerializer() );
         typeMap.put( String.class, new StringSerializer() );
+        typeMap.put( Enum.class, new StringSerializer() );
+        typeMap.put( Number.class, new StringSerializer() );
         typeMap.put( List.class, new ListSerializer(this) );
         typeMap.put( ArrayList.class, new ListSerializer(this) );
     }
@@ -119,6 +121,7 @@ public class XHTMLSerialize<T> implements XHTMLSerializer {
               .stream()
               .filter(pd -> !shouldIgnore(pd))
               .filter(pd -> !"class".equals(pd.getName()))
+              .filter(pd -> !"declaringClass".equals(pd.getName()))
               .forEach(pd -> props.add(toXHTML(pd, item, levels)));
         } catch (IntrospectionException e) {
             throw new RuntimeException(e);
