@@ -29,6 +29,8 @@ public class XHTMLSerialize<T> implements XHTMLSerializer {
         typeMap.put( String.class, new StringSerializer() );
         typeMap.put( Enum.class, new StringSerializer() );
         typeMap.put( Number.class, new StringSerializer() );
+        typeMap.put( Boolean.class, new PrimitiveSerializer() );
+        typeMap.put( Number.class, new PrimitiveSerializer() );
         typeMap.put( List.class, new ListSerializer(this) );
         typeMap.put( ArrayList.class, new ListSerializer(this) );
     }
@@ -91,6 +93,8 @@ public class XHTMLSerialize<T> implements XHTMLSerializer {
             res = ser.get().generateElement(obj, levels);
         } else {
             res = new div()
+              .addClz( "object" )
+              .set( "data-object-type", obj.getClass().getName() )
               .add(header(obj))
               .add(propList(obj, levels));
         }

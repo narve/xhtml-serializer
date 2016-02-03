@@ -28,7 +28,7 @@ public class Properties {
     }
 
     public static boolean isBean(String cname) {
-        return !cname.startsWith("java") && !cname.startsWith("org.hibernate");
+        return !cname.startsWith("java") && !cname.startsWith("org.hibernate") && cname.contains( ".");
     }
 
     public Map<String, Object> getProps() {
