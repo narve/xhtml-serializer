@@ -94,7 +94,7 @@ public class XHTMLSerialize<T> implements XHTMLSerializer {
         } else {
             res = new div()
               .addClz( "object" )
-              .set( "data-object-type", obj.getClass().getName() )
+              .set( "typeOf", obj.getClass().getName() )
               .add(header(obj))
               .add(propList(obj, levels));
         }
@@ -154,7 +154,7 @@ public class XHTMLSerialize<T> implements XHTMLSerializer {
         Element<?> content = val == null ? string(val) : generateElement(val, levels - 1);
         return asList(
           new dt(name),
-          new dd().add(content)
+          new dd().set( "property", name).add(content)
         );
     }
 

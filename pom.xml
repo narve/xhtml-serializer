@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.narve</groupId>
     <artifactId>xhtml-serializer</artifactId>
-    <version>2</version>
+    <version>3-SNAPSHOT</version>
 
     <name>XHTML-serializer</name>
 
