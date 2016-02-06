@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.github.narve</groupId>
             <artifactId>xhtml-generator</artifactId>
-            <version>2</version>
+            <version>3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -70,14 +70,14 @@
         </plugins>
     </build>
 
-    <repositories>
-        <!--other repositories if any-->
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
+    <!--<repositories>-->
+        <!--&lt;!&ndash;other repositories if any&ndash;&gt;-->
+        <!--<repository>-->
+            <!--<id>jitpack.io</id>-->
+            <!--<url>https://jitpack.io</url>-->
+        <!--</repository>-->
 
-    </repositories>
+    <!--</repositories>-->
 
 
 </project>
