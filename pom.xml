@@ -70,14 +70,14 @@
         </plugins>
     </build>
 
-    <!--<repositories>-->
-        <!--&lt;!&ndash;other repositories if any&ndash;&gt;-->
-        <!--<repository>-->
-            <!--<id>jitpack.io</id>-->
-            <!--<url>https://jitpack.io</url>-->
-        <!--</repository>-->
+    <repositories>
+        <!--other repositories if any-->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
 
-    <!--</repositories>-->
+    </repositories>
 
 
 </project>
